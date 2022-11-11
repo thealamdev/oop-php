@@ -40,3 +40,6 @@ $emplyee = new Employee("Sajjat", 20000, "18");
 $emplyee->show();
 $manger = new Manager("Shah alam", 100000, "21");
 $manger->show();
+
+
+ 
