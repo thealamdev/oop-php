@@ -2,7 +2,7 @@
 
 class Domain{
     protected static function getWebSiteName(){
-        echo "shahalom.com";
+        echo "shahalom.com" . "<br>";
     }
 }
 
@@ -13,7 +13,16 @@ class personalDomain extends Domain{
     }
 }
 
- 
+class subdomain extends Domain{
+    public $subdomain;
+    public function show(){
+        $this->subdomain = parent::getWebSiteName();
+        echo "clock. {$this->subdomain}";
+    }
+     
+}
 
 $ob = new personalDomain();
+$sub = new subdomain();
 $ob->siteName();
+$sub->show();
