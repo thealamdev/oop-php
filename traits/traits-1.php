@@ -13,7 +13,10 @@ trait Evenig{
 
 class greating{
     use Morning,Evenig;
-   
+    public $time;
+    public function timeDate(){
+       return $this->time = date("ha");
+    }
 
 }
 
@@ -23,3 +26,4 @@ class greating{
 $object = new greating();
 $object->Greating();
 $object->evening();
+echo $object->timeDate();
