@@ -1,24 +1,37 @@
 <?php
 
-interface storeDex{
-    public function name();
-    public function age();
+interface Animal{
+    public function makeSound();
 }
 
 
-class index implements storeDex{
-    public function name()
+class Cat implements Animal{
+    public function makeSound()
     {
-        echo "hi";
-    }
-
-    public function age(){
-        echo "age is 21";
+        echo "meau";
     }
 }
 
+class Dog implements Animal{
+    public function makeSound()
+    {
+        echo "Vou vou";
+    }
+}
 
-$ob = new index();
+class Cow implements Animal{
+    public function makeSound()
+    {
+        echo "hamba hamba";
+    }
+}
 
-$ob->name();
-$ob->age();
+$cat = new Cat();
+$dog = new Dog();
+$cow = new Cow();
+
+
+$animals = [$cat,$dog,$cow];
+foreach($animals as $animal){
+    echo $animal->makeSound();
+}
