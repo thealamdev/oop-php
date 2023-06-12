@@ -1,6 +1,7 @@
 <?php
 
 class Fruit{
+     
     public $name;
     public $age = 20;
     function __construct($n){
@@ -28,5 +29,9 @@ class Product{
 
 }
 
-$object = new Product();
+$object = new PRODUCT();
 echo $object->result;
+
+foreach($object as $key => $ob){
+    echo $ob . "<br>";
+}
