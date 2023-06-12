@@ -32,6 +32,4 @@ class Product{
 $object = new PRODUCT();
 echo $object->result;
 
-foreach($object as $key => $ob){
-    echo $ob . "<br>";
-}
+ 
